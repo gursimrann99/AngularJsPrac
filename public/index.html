@@ -1,0 +1,56 @@
+<!doctype html>
+<html ng-app="myModule">
+  <head>
+    <title>Assignment</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="../scriptJson.js"></script>
+    <style>
+      .btn-primary:focus
+       {
+          background-color: #85C1E9;
+        }
+        input.ng-invalid {
+           border-color:red;
+        }
+        input.ng-valid {
+           border-color:lightgreen;
+         }
+    </style>
+  </head>
+  <body ng-controller="myController">
+    <div class="container" ng-repeat="book in books">
+      <div> <h3><b class="text-uppercase">{{book.title}} </b> <span><i class="pull-right">{{book.price}}</i></span></h3>
+        <div>    {{book.author}}
+          <div>  <img src="{{book.image}}" class="img-thumbnail" style= "height:150px; width:150px"/>
+           <div> <button class="btn btn-primary" ng-click="click = 1">Description</button>
+            <button class="btn btn-primary" ng-click="click = 2">Specifications</button>
+            <button class="btn btn-primary" ng-click="click = 3">Reviews</button>
+
+            <div ng-show="click==1" > <h4><b>Discription</h4> </b>
+              <p>{{book.description}}</p>
+            </div>
+            <div ng-show="click==2" ><h4><b>Specifications</h4> </b>
+              <p>{{book.specifications}}</p>
+            </div>
+            <div ng-show="click==3"><h4><b>Reviews</h4> </b>
+              <blockquote><p  ng-repeat="review in book.reviews"> <b>Star: {{review.star}}</b>, {{review.comment}} </br>
+                  by {{review.email}}
+              </p></blockquote>
+              <form name="myForm" ng-submit="addEntry(book)">Rate the book
+                <select ng-model="book.star" required>
+                  <option ng-repeat="rating in ratings" required>{{rating.star}}</option>
+                </select> <br>
+                <textarea placeholder="Write a short review for the book" ng-model="book.comment" required> </textarea> </br>
+                <input placeholder="email" type="email" name="myInput" ng-model="book.email" required></br>
+                <input type="submit" id="submit" value="Submit Review" />
+                </form>
+                <h5>review form is {{myForm.myInput.$valid}}</h5>
+             </div>
+           </div>
+         </div>
+       </div>
+      </div>
+    </div>
+  </body>
+</html>

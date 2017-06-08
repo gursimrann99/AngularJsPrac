@@ -1,0 +1,67 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "I Too Had a Love Story",
+      "price": "₹198",
+      "author": "by Ravinder Singh",
+      "image": "images/ravinder.jpg",
+      "specifications": "Pages: 213",
+      "description": "I Too Had a Love Story is an English autobiographical novel written by Ravinder Singh",
+      "reviews": [
+        {
+          "star": "5",
+          "comment": "must read",
+          "email": "gursimran@gg.com"
+        },
+        {
+          "star": "4",
+          "comment": "a gem",
+          "email": "singh@yy.com"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Revolution 2020",
+      "price": "₹121",
+      "author": "by Chetan Bhagat",
+      "image": "images/chetan.jpg",
+      "specifications": "Pages: 296",
+      "description": "Its story is concerned with a love triangle, corruption and a journey of self-discovery.",
+      "reviews": [
+        {
+          "star": "4",
+          "comment": "fantastic",
+          "email": "guddi@hh.com"
+        },
+        {
+          "star": "4",
+          "comment": "good one",
+          "email": "simar@gg.com"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Playing It My Way",
+      "author": "by Sachin Tendulkar",
+      "price": "₹248",
+      "image": "images/sachin.jpeg",
+      "specifications": "Pages: 486",
+      "description": "Playing It My Way is the autobiography of former Indian cricketer Sachin Tendulkar",
+      "reviews": [
+        {
+          "star": "5",
+          "comment": "inspiring",
+          "email": "guru@gg.com"
+        },
+        {
+          "star": "4",
+          "comment": "wow",
+          "email": "simran@si.com"
+        }
+      ]
+    }
+  ]
+}
