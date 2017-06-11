@@ -19,10 +19,10 @@
     </style>
   </head>
   <body ng-controller="myController">
-    <div class="container" ng-repeat="book in books">
+    <div class="container" ng-repeat="book in books" ng-if="book.status=='available' || book.status=='soldOut'">
       <div> <h3><b class="text-uppercase">{{book.title}} </b> <span><i class="pull-right">{{book.price}}</i></span></h3>
         <div>    {{book.author}}
-          <div>  <img src="{{book.image}}" class="img-thumbnail" style= "height:150px; width:150px"/>
+          <div>  <img src="{{book.image}}" class="img-thumbnail" style= "height:150px; width:150px"/><button ng-if="book.status=='available'">Add to cart</button>
            <div> <button class="btn btn-primary" ng-click="click = 1">Description</button>
             <button class="btn btn-primary" ng-click="click = 2">Specifications</button>
             <button class="btn btn-primary" ng-click="click = 3">Reviews</button>
@@ -38,7 +38,7 @@
                   by {{review.email}}
               </p></blockquote>
               <form name="myForm" ng-submit="addEntry(book)">Rate the book
-                <select ng-model="book.star" required>
+                <select ng-model="book.star">
                   <option ng-repeat="rating in ratings" required>{{rating.star}}</option>
                 </select> <br>
                 <textarea placeholder="Write a short review for the book" ng-model="book.comment" required> </textarea> </br>

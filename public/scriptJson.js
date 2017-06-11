@@ -7,7 +7,7 @@ var app = angular
               })
               .then(function(res){
                 console.log(res.data);
-                console.log("jguyfg");
+                console.log("receiving");
                 $scope.books = res.data;
 
             });
@@ -20,6 +20,10 @@ var app = angular
                   email: data.email,
                   comment: data.comment
                 }
+                if (data.star==undefined) {
+                  alert("Pl select rating");
+                }
+                else {
                 data.reviews.push(tempObj);
                 delete data.star;
                 delete data.email;
@@ -31,7 +35,7 @@ var app = angular
                     url: 'http://localhost:8081/books/' + data.id,
                     data: data
                })
-            
+            }
               }
  
 

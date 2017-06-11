@@ -7,6 +7,7 @@
       "author": "by Ravinder Singh",
       "image": "images/ravinder.jpg",
       "specifications": "Pages: 213",
+      "status": "available",
       "description": "I Too Had a Love Story is an English autobiographical novel written by Ravinder Singh",
       "reviews": [
         {
@@ -28,6 +29,7 @@
       "author": "by Chetan Bhagat",
       "image": "images/chetan.jpg",
       "specifications": "Pages: 296",
+      "status": "soldOut",
       "description": "Its story is concerned with a love triangle, corruption and a journey of self-discovery.",
       "reviews": [
         {
@@ -49,6 +51,7 @@
       "price": "₹248",
       "image": "images/sachin.jpeg",
       "specifications": "Pages: 486",
+      "status": "available",
       "description": "Playing It My Way is the autobiography of former Indian cricketer Sachin Tendulkar",
       "reviews": [
         {
@@ -60,6 +63,28 @@
           "star": "4",
           "comment": "wow",
           "email": "simran@si.com"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Harry Potter and the Sorcerer's Stone",
+      "author": "by J. K. Rowling",
+      "price": "₹598",
+      "image": "images/sachin.jpeg",
+      "specifications": "Pages: 486",
+      "status": "notForSale",
+      "description": "The film was released in theatres in the United Kingdom and the United States on 16 November 2001.",
+      "reviews": [
+        {
+          "star": "5",
+          "comment": "magical",
+          "email": "gure@gg.com"
+        },
+        {
+          "star": "4",
+          "comment": "sensational",
+          "email": "simr@si.com"
         }
       ]
     }
